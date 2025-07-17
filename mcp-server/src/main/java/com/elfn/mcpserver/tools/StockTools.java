@@ -1,7 +1,6 @@
 package com.elfn.mcpserver.tools;
 
 import org.springframework.ai.tool.annotation.Tool;
-import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -14,7 +13,7 @@ import java.util.List;
  *
  * @author Elimane
  */
-@Service
+// @Service //=> Pas nécéssaire ici car l’objet StockTools est instancié manuellement dans la méthode suivante de la classe ToolsConfig
 public class StockTools {
 
     /**
