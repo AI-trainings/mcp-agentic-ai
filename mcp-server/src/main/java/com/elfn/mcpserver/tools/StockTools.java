@@ -20,8 +20,8 @@ public class StockTools {
      * Liste statique d'entreprises simulées.
      */
     private List<Company> companies = List.of(
-            new Company("CI Telecom", "Telecom", 3, 10600, "Côte d'Ivoire"),
-            new Company("OCP", "Extraction minière", 5, 20000, "Côte d'Ivoire")
+            new Company("Orance CI", "Telecom", 3, 10600, "Côte d'Ivoire"),
+            new Company("BCM COTE D'IVOIRE", "Extraction minière", 5, 20000, "Côte d'Ivoire")
     );
 
     /**
