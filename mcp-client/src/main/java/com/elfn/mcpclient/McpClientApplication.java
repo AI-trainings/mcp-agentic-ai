@@ -45,7 +45,7 @@ public class McpClientApplication {
             // Préparation et envoi de la requête à l’outil
             String params = """
             {
-                "name": "OCP"
+                "name": "BCM COTE D'IVOIRE"
             }
             """;
 
