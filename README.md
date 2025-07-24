@@ -55,6 +55,7 @@ Cette application montre comment :
 
 ### 📊 Diagramme de séquences (simplifié)
 
+```mermaid
 sequenceDiagram
     participant UI as 🧑 Utilisateur (Angular/Swagger)
     participant RestCtrl as 🌱 REST Controller
