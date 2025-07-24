@@ -1,6 +1,8 @@
 package com.elfn.mcpclient.agents;
 
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
+import org.springframework.ai.chat.memory.MessageWindowChatMemory;
 import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +19,10 @@ public class AIAgent {
 
     /**
      * Constructeur de l'agent IA.
-     * Initialise le client LLM avec des outils par défaut et un prompt système par défaut.
+     * Initialise le client LLM avec :
+     * - un système par défaut qui demande de répondre à l'utilisateur en utilisant les outils fournis,
+     * - un fournisseur de callbacks pour l'exécution des outils,
+     * - un conseiller de mémoire de chat basé sur une fenêtre de 10 messages.
      *
      * @param chatClient Le builder du client de chat IA.
      * @param toolCallbackProvider Le fournisseur de callbacks pour les outils utilisés par l'agent.
@@ -26,6 +31,8 @@ public class AIAgent {
         this.chatClient = chatClient
                 .defaultToolCallbacks(toolCallbackProvider)
                 .defaultSystem("Answer user question using provided tools")
+                .defaultAdvisors(MessageChatMemoryAdvisor
+                        .builder(MessageWindowChatMemory.builder().maxMessages(10).build()).build())
                 .build();
     }
 
