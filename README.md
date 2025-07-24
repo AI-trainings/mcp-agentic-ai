@@ -57,27 +57,27 @@ Cette application montre comment :
 
 ```mermaid
 sequenceDiagram
-    participant UI as 🧑 Utilisateur (Angular/Swagger)
-    participant RestCtrl as 🌱 REST Controller
-    participant Agent as 🧠 IA Agent
-    participant LLM as 🧠 LLM (OpenAI/Claude)
-    participant MCPClient as 🔁 MCP Client
-    participant ToolNode as 🟢 Tool NodeJS
-    participant ToolPython as 🐍 Tool Python
+    participant UI as User (Angular/Swagger)
+    participant RestCtrl as REST Controller
+    participant Agent as AI Agent
+    participant LLM as LLM (OpenAI/Claude)
+    participant MCPClient as MCP Client
+    participant ToolNode as NodeJS Tool
+    participant ToolPython as Python Tool
 
-    UI->>RestCtrl: Envoie une requête (query)
-    RestCtrl->>Agent: Transmet la requête
-    Agent->>LLM: Envoie prompt + contexte + tools
-    LLM->>MCPClient: Choix d’un tool (Node/Python)
-    MCPClient->>ToolNode: Appel STDIO (ex: npx)
-    MCPClient->>ToolPython: Appel STDIO (ex: uv)
-    ToolNode-->>MCPClient: Réponse JSON
-    ToolPython-->>MCPClient: Réponse JSON
-    MCPClient-->>Agent: Résultat brut
+    UI->>RestCtrl: Sends a query
+    RestCtrl->>Agent: Forwards the query
+    Agent->>LLM: Sends prompt + context + tools
+    LLM->>MCPClient: Chooses a tool (Node/Python)
+    MCPClient->>ToolNode: STDIO call (e.g., npx)
+    MCPClient->>ToolPython: STDIO call (e.g., uv)
+    ToolNode-->>MCPClient: JSON response
+    ToolPython-->>MCPClient: JSON response
+    MCPClient-->>Agent: Raw result
     Agent-->>LLM: Observation
-    LLM-->>Agent: Réponse finale
-    Agent-->>RestCtrl: Résultat
-    RestCtrl-->>UI: Réponse utilisateur
+    LLM-->>Agent: Final answer
+    Agent-->>RestCtrl: Result
+    RestCtrl-->>UI: User response
 ```
 
 
