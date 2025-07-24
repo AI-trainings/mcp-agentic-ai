@@ -103,12 +103,3 @@ POST /chat
 }
 ```
 
-
-
-### Résumé :
-
-- Utilise `##` pour les titres (équivalent à `<h2>`)
-- Utilise des emojis pour enrichir visuellement
-- Les blocs de code sont entourés de ``` (triple backticks)
-- Pour indiquer un langage comme `json` ou `bash`, écris-le juste après les backticks : ```` ```json ````
-
