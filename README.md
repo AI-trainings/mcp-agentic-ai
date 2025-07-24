@@ -78,7 +78,7 @@ sequenceDiagram
     LLM-->>Agent: Réponse finale
     Agent-->>RestCtrl: Résultat
     RestCtrl-->>UI: Réponse utilisateur
-
+```
 
 
 🚀 Démarrage rapide
