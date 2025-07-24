@@ -81,29 +81,38 @@ sequenceDiagram
 ```
 
 
-🚀 Démarrage rapide
-Clone du projet
+## 🚀 Démarrage rapide
 
-Configure .env avec ta clé OpenAI
+1. Clone du projet  
+2. Configure `.env` avec ta clé OpenAI  
+3. Lance le backend : `Spring Boot`  
+4. Lance un outil via `npx` ou `uv`  
+5. Teste via Swagger (`http://localhost:8066/swagger-ui.html`)
 
-Lance le backend : Spring Boot
+## 🧪 Exemple de requête
 
-Lance un outil via npx ou uv
-
-Teste via Swagger (http://localhost:8066/swagger-ui.html)
-
-🧪 Exemple de requête
+## Réponse
+```json
 POST /chat
 {
   "query": "Crée un fichier nommé test.md avec le contenu Bonjour"
 }
-Réponse :
 
 {
   "result": "Fichier test.md créé avec succès dans le répertoire autorisé"
 }
-🙌 Contribution
-Les PR sont les bienvenues ! Pour tout bug ou question, ouvre une issue.
 
-📄 Licence
-MIT © 2025 – Elimane
+
+
+---
+
+### Résumé :
+
+- Utilise `##` pour les titres (équivalent à `<h2>`)
+- Utilise des emojis pour enrichir visuellement
+- Les blocs de code sont entourés de ``` (triple backticks)
+- Pour indiquer un langage comme `json` ou `bash`, écris-le juste après les backticks : ```` ```json ````
+
+---
+
+Souhaite-tu que je te génère un bloc complet prêt à copier-coller ?
