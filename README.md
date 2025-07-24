@@ -53,7 +53,7 @@ Cette application montre comment :
 
 ---
 
-### 📊 Diagramme de flux (simplifié)
+### 📊 Diagramme de séquences (simplifié)
 
 sequenceDiagram
     participant UI as 🧑 Utilisateur (Angular/Swagger)
@@ -77,6 +77,7 @@ sequenceDiagram
     LLM-->>Agent: Réponse finale
     Agent-->>RestCtrl: Résultat
     RestCtrl-->>UI: Réponse utilisateur
+
 
 
 🚀 Démarrage rapide
