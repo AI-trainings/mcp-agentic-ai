@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "C:\\Users\\Elima\\AppData\\Roaming\\npm\\npx.cmd",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Cours\\Programming\\AI\\MCP & AI Agents - Fundamentals & Implementations - Java Spring AI - Python - NodeJS\\mcp-demo-spring-python"
+      ]
+    }
+  }
+}
