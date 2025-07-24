@@ -101,10 +101,9 @@ POST /chat
 {
   "result": "Fichier test.md créé avec succès dans le répertoire autorisé"
 }
+```
 
 
-
----
 
 ### Résumé :
 
@@ -113,6 +112,3 @@ POST /chat
 - Les blocs de code sont entourés de ``` (triple backticks)
 - Pour indiquer un langage comme `json` ou `bash`, écris-le juste après les backticks : ```` ```json ````
 
----
-
-Souhaite-tu que je te génère un bloc complet prêt à copier-coller ?
