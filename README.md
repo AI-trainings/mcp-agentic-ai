@@ -14,11 +14,11 @@
 
 Cette application montre comment :
 
-- Mettre en place un **serveur MCP** (Spring Boot, NodeJS, Python)
+- Mettre en place des **serveurs MCP** (Spring Boot, NodeJS, Python)
 - Intégrer un **client Spring AI** compatible avec Claude, LLaMA3.2 et OpenAI
 - Créer un **agent intelligent** (`ToolCallbackProvider`, mémoire contextuelle, etc.)
 - Appeler dynamiquement des **tools STDIO**
-- **Tester via Swagger UI**, Postman et Front Angular/Thymeleaf
+- **Tester via Swagger UI**, Postman ou Front Angular/Thymeleaf
 
 ---
 
