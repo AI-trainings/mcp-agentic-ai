@@ -55,7 +55,6 @@ Cette application montre comment :
 
 ### 📊 Diagramme de flux (simplifié)
 
-```mermaid
 sequenceDiagram
     participant UI as 🧑 Utilisateur (Angular/Swagger)
     participant RestCtrl as 🌱 REST Controller
