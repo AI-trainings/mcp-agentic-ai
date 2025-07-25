@@ -80,8 +80,7 @@ sequenceDiagram
     RestCtrl-->>UI: User response
 ```
 
-%% Titre du diagramme
-%% Diagramme de flux du projet MCP avec client Java Spring et serveur Python
+### 📊 Diagramme de flux du projet MCP avec client Java Spring et serveur Python
 
 ```mermaid
 flowchart TD
