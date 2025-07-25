@@ -104,6 +104,18 @@ flowchart TD
     C --> B
     B --> A
 ```
+👤 Utilisateur (via Swagger ou Angular) soumet une requête naturelle.
+
+🌐 API REST Spring reçoit la requête et la transmet à l’agent IA.
+
+🧠 Agent IA (Spring AI) interprète la requête et appelle un LLM (OpenAI, Claude, LLaMA).
+
+🧠 LLM déduit quel outil utiliser et envoie l’action au MCP Client Java.
+
+📘 MCP Client interagit avec un serveur MCP (Node.js ou Python) selon le besoin.
+
+✅ La réponse remonte jusqu'à l’utilisateur via la chaîne inverse.  
+
 
 ## 🚀 Démarrage rapide
 
