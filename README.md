@@ -84,37 +84,59 @@ sequenceDiagram
 
 ```mermaid
 flowchart TD
-    A["👤 Utilisateur (Swagger / Angular)"] --> B["🌐 API REST Spring (RestController)"]
-    B --> C["🧠 Agent IA (Spring AI)"]
-    C --> D["🧠 LLM (OpenAI / Claude / LLaMA)"]
-
-    subgraph "MCP Client (Java)"
-        E["📘 MCP Client"]
+    subgraph UI
+        A[👤 Utilisateur - Swagger / Angular]
     end
 
-    D --> E
-    E --> F1["🟢 Serveur MCP Node.js"]
-    E --> F2["🐍 Serveur MCP Python"]
+    subgraph API
+        B[🌐 API REST Spring - RestController]
+    end
 
-    F1 --> E
-    F2 --> E
-    E --> C
+    subgraph AI
+        C[🧠 Agent IA - Spring AI]
+        D[🧠 LLM - OpenAI / Claude / LLaMA]
+    end
+
+    subgraph MCP
+        E[📘 MCP Client - Java]
+    end
+
+    subgraph MCP_SERVERS
+        F[🟢 Serveur MCP Node.js - Tools: – read_file – write_file …]
+        G[🐍 Serveur MCP Python - Tools: – get_employee_info]
+        H[☕ Serveur MCP Java - Tools: – Company – Stock]
+    end
+
+    A --> B
+    B --> C
     C --> D
-    D --> C
-    C --> B
-    B --> A
+    D --> E
+    C --> E
+    E --> F
+    E --> G
+    E --> H
 ```
-👤 Utilisateur (via Swagger ou Angular) soumet une requête naturelle.
+👤 Utilisateur : Fait une requête via Swagger ou Angular.
 
-🌐 API REST Spring reçoit la requête et la transmet à l’agent IA.
+🌐 API REST Spring : Reçoit et transmet la requête à l'agent IA.
 
-🧠 Agent IA (Spring AI) interprète la requête et appelle un LLM (OpenAI, Claude, LLaMA).
+🧠 Agent IA (Spring AI) : Analyse la demande et interroge le LLM si nécessaire.
 
-🧠 LLM déduit quel outil utiliser et envoie l’action au MCP Client Java.
+🧠 LLM : Génère l'appel à un outil parmi ceux des serveurs MCP.
 
-📘 MCP Client interagit avec un serveur MCP (Node.js ou Python) selon le besoin.
+📘 MCP Client (Java) : Transmet la commande au bon serveur MCP.
 
-✅ La réponse remonte jusqu'à l’utilisateur via la chaîne inverse.  
+☕ Serveur MCP Java :
+
+Company, Stock
+
+🐍 Serveur MCP Python :
+
+get_employee_info
+
+🟢 Serveur MCP Node.js :
+
+read_file, write_file, edit_file, move_file, list_directory, create_directory, get_file_info, search_files, list_allowed_directories 
 
 
 ## 🚀 Démarrage rapide
