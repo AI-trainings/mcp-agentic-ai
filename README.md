@@ -87,7 +87,7 @@ sequenceDiagram
 flowchart TD
     title[Diagramme de flux du projet MCP]
 
-    A[Utilisateur] -->|Requête GET /chat| B[Swagger UI (ai-rest-controller)]
+    A[Utilisateur] -->|Requête GET /chat| B[Swagger UI ai-rest-controller]
     B -->|Requête avec query| C[Client Java Spring]
     C -->|Appel MCP| D[Moteur MCP Client]
     D -->|Message Stdin| E[Serveur Python MCP]
@@ -98,11 +98,11 @@ flowchart TD
     C -->|Formate réponse finale| B
     B -->|Affiche la réponse| A
 
-    subgraph Serveur MCP Python
+    subgraph Serveur_MCP_Python
         E --> F
     end
 
-    subgraph Client Java Spring
+    subgraph Client_Java_Spring
         C --> D
     end
 ```
