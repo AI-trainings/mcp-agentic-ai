@@ -7,6 +7,17 @@
         "@modelcontextprotocol/server-filesystem",
         "C:\\Cours\\Programming\\AI\\MCP & AI Agents - Fundamentals & Implementations - Java Spring AI - Python - NodeJS\\mcp-demo-spring-python"
       ]
+    },
+    "Python_MCP_Server": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp[cli]",
+        "mcp",
+        "run",
+        "C:\\Cours\\Programming\\AI\\MCP & AI Agents - Fundamentals & Implementations - Java Spring AI - Python - NodeJS\\mcp-demo-spring-python\\python-mcp-server\\server.py"
+      ]
     }
   }
 }
