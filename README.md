@@ -127,7 +127,7 @@ flowchart TD
     C --> B
     B --> A
 ```
-🔍 Résumé du workflow (README prêt)
+🔍 Résumé du workflow
 👤 Utilisateur : Fait une requête via Swagger ou Angular.
 
 🌐 API REST Spring : Reçoit et transmet la requête à l'agent IA.
