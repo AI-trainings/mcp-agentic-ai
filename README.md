@@ -127,22 +127,35 @@ flowchart TD
     C --> B
     B --> A
 ```
-🧭 Workflow résumé (📥 → 📤)
-👤 L'utilisateur envoie une question via Swagger ou Angular.
+🔍 Résumé du workflow (README prêt)
+👤 Utilisateur : Fait une requête via Swagger ou Angular.
 
-🧠 L’agent IA Spring formate la requête et consulte un LLM (OpenAI, Claude, LLaMA).
+🌐 API REST Spring : Reçoit et transmet la requête à l'agent IA.
 
-🧮 Le LLM décide quel outil MCP appeler (Node.js, Python ou Java).
+🧠 Agent IA (Spring AI) : Analyse la demande et interroge le LLM si nécessaire.
 
-🔁 Le client MCP Java exécute l’outil choisi via STDIO.
+🧠 LLM : Génère l'appel à un outil parmi ceux des serveurs MCP.
 
-🧰 Le serveur MCP traite la requête et renvoie un résultat JSON.
+🔁 MCP Client (Java) : Transmet la commande au bon serveur MCP selon le choix du LLM.
 
-📩 Le client MCP reçoit la réponse et la transmet à l’agent IA.
+🧰 Serveurs MCP disponibles
+☕ Serveur MCP Java :
+Company, Stock
 
-🗣️ Le LLM génère la réponse finale.
+🐍 Serveur MCP Python :
+get_employee_info
 
-📤 L'API Spring retourne la réponse à l'utilisateur.
+🟢 Serveur MCP Node.js (outils filesystem) :
+read_file, write_file, ...
+
+🔄 Retour de réponse
+📦 Le serveur MCP exécute l’outil et renvoie un résultat JSON.
+
+📬 Le MCP Client reçoit la réponse et la transmet à l'agent IA.
+
+💡 Le LLM complète la réponse avec le contexte.
+
+📤 L'API Spring retourne la réponse finale à l'utilisateur.
 
 
 ## 🚀 Démarrage rapide
