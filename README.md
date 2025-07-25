@@ -80,12 +80,10 @@ sequenceDiagram
     RestCtrl-->>UI: User response
 ```
 
-### 📊 Diagramme de flux du projet MCP avec client Java Spring et serveur Python
+### 📊 Diagramme de flux du projet
 
 ```mermaid
 flowchart TD
-    title[Diagramme de flux du projet MCP]
-
     A[Utilisateur] -->|Requête GET /chat| B[Swagger UI ai-rest-controller]
     B -->|Requête avec query| C[Client Java Spring]
     C -->|Appel MCP| D[Moteur MCP Client]
