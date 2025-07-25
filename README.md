@@ -138,8 +138,8 @@ flowchart TD
 
 🔁 MCP Client (Java) : Transmet la commande au bon serveur MCP selon le choix du LLM.
 
-### 🧰 Serveurs MCP disponibles
-☕ Serveur MCP Java :
+## 🧰 Serveurs MCP disponibles
+### ☕ Serveur MCP Java :
 Company, Stock
 
 ### 🐍 Serveur MCP Python :
