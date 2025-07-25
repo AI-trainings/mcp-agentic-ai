@@ -85,20 +85,20 @@ sequenceDiagram
 ```mermaid
 flowchart TD
     subgraph UI
-        A[Utilisateur (Swagger / Angular)]
+        A[Utilisateur - Swagger / Angular]
     end
 
     subgraph API
-        B[API REST Spring (RestController)]
+        B[API REST Spring - RestController]
     end
 
     subgraph AI
-        C[Agent IA (Spring AI)]
-        D[LLM (OpenAI / Claude / LLaMA)]
+        C[Agent IA - Spring AI]
+        D[LLM - OpenAI / Claude / LLaMA]
     end
 
     subgraph MCP
-        E[MCP Client (Java)]
+        E[MCP Client - Java]
     end
 
     subgraph MCP_SERVERS
