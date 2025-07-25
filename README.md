@@ -158,7 +158,7 @@ read_file, write_file, ...
 📤 L'API Spring retourne la réponse finale à l'utilisateur.
 
 
-## 🚀 Démarrage rapide
+# 🚀 Démarrage rapide
 
 1. Clone du projet  
 2. Configure `.env` avec ta clé OpenAI  
