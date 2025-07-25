@@ -84,24 +84,26 @@ sequenceDiagram
 
 ```mermaid
 flowchart TD
-    A[Utilisateur] -->|Requête GET /chat| B[Swagger UI ai-rest-controller]
-    B -->|Requête avec query| C[Client Java Spring]
-    C -->|Appel MCP| D[Moteur MCP Client]
-    D -->|Message Stdin| E[Serveur Python MCP]
-    E -->|Recherche via outils MCP| F[get_employee_info]
-    F -->|Retourne JSON : name, salary| E
-    E -->|Réponse au client| D
-    D -->|Réponse| C
-    C -->|Formate réponse finale| B
-    B -->|Affiche la réponse| A
+    A[🧑 Utilisateur (Swagger / Angular)] -->|1. Saisie de question| B[🌐 API REST Spring (RestController)]
+    B -->|2. Transmet la requête| C[🧠 Agent IA (Spring AI)]
+    C -->|3. Construit prompt + contexte + tools| D[🧠 LLM (OpenAI / Claude / LLaMA)]
 
-    subgraph Serveur_MCP_Python
-        E --> F
+    subgraph 🔁 MCP Client (Java Spring)
+        E[🔗 MCPClient]
     end
 
-    subgraph Client_Java_Spring
-        C --> D
-    end
+    D -->|4. Choix d’un outil MCP| E
+    E -->|5. Appel STDIO| F1[🟢 Serveur MCP Node.js]
+    E -->|5. Appel STDIO| F2[🐍 Serveur MCP Python]
+
+    F1 -->|6. Résultat JSON| E
+    F2 -->|6. Résultat JSON| E
+
+    E -->|7. Réponse brute| C
+    C -->|8. Observation| D
+    D -->|9. Réponse finale| C
+    C -->|10. Transmet résultat| B
+    B -->|11. Réponse affichée| A
 ```
 
 ## 🚀 Démarrage rapide
