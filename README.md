@@ -127,7 +127,7 @@ flowchart TD
     C --> B
     B --> A
 ```
-🔍 Résumé du workflow
+# 🔍 Résumé du workflow
 👤 Utilisateur : Fait une requête via Swagger ou Angular.
 
 🌐 API REST Spring : Reçoit et transmet la requête à l'agent IA.
@@ -138,17 +138,17 @@ flowchart TD
 
 🔁 MCP Client (Java) : Transmet la commande au bon serveur MCP selon le choix du LLM.
 
-🧰 Serveurs MCP disponibles
+# 🧰 Serveurs MCP disponibles
 ☕ Serveur MCP Java :
 Company, Stock
 
-🐍 Serveur MCP Python :
+# 🐍 Serveur MCP Python :
 get_employee_info
 
-🟢 Serveur MCP Node.js (outils filesystem) :
+# 🟢 Serveur MCP Node.js (outils filesystem) :
 read_file, write_file, ...
 
-🔄 Retour de réponse
+# 🔄 Retour de réponse
 📦 Le serveur MCP exécute l’outil et renvoie un résultat JSON.
 
 📬 Le MCP Client reçoit la réponse et la transmet à l'agent IA.
