@@ -85,58 +85,64 @@ sequenceDiagram
 ```mermaid
 flowchart TD
     subgraph UI
-        A[👤 Utilisateur - Swagger / Angular]
+        A[Utilisateur (Swagger / Angular)]
     end
 
     subgraph API
-        B[🌐 API REST Spring - RestController]
+        B[API REST Spring (RestController)]
     end
 
     subgraph AI
-        C[🧠 Agent IA - Spring AI]
-        D[🧠 LLM - OpenAI / Claude / LLaMA]
+        C[Agent IA (Spring AI)]
+        D[LLM (OpenAI / Claude / LLaMA)]
     end
 
     subgraph MCP
-        E[📘 MCP Client - Java]
+        E[MCP Client (Java)]
     end
 
     subgraph MCP_SERVERS
-        F[🟢 Serveur MCP Node.js - Tools: – read_file – write_file …]
-        G[🐍 Serveur MCP Python - Tools: – get_employee_info]
-        H[☕ Serveur MCP Java - Tools: – Company – Stock]
+        F[Serveur MCP Node.js\nTools:\n– read_file\n– write_file\n…]
+        G[Serveur MCP Python\nTools:\n– get_employee_info]
+        H[Serveur MCP Java\nTools:\n– company\n– stock]
     end
 
+    %% Requête utilisateur jusqu’à la sélection du tool
     A --> B
     B --> C
     C --> D
     D --> E
     C --> E
+
+    %% Appel du bon serveur selon le tool
     E --> F
     E --> G
     E --> H
+
+    %% Retour du résultat
+    F --> E
+    G --> E
+    H --> E
+    E --> C
+    C --> B
+    B --> A
 ```
-👤 Utilisateur : Fait une requête via Swagger ou Angular.
+🧭 Workflow résumé (📥 → 📤)
+👤 L'utilisateur envoie une question via Swagger ou Angular.
 
-🌐 API REST Spring : Reçoit et transmet la requête à l'agent IA.
+🧠 L’agent IA Spring formate la requête et consulte un LLM (OpenAI, Claude, LLaMA).
 
-🧠 Agent IA (Spring AI) : Analyse la demande et interroge le LLM si nécessaire.
+🧮 Le LLM décide quel outil MCP appeler (Node.js, Python ou Java).
 
-🧠 LLM : Génère l'appel à un outil parmi ceux des serveurs MCP.
+🔁 Le client MCP Java exécute l’outil choisi via STDIO.
 
-📘 MCP Client (Java) : Transmet la commande au bon serveur MCP.
+🧰 Le serveur MCP traite la requête et renvoie un résultat JSON.
 
-☕ Serveur MCP Java :
+📩 Le client MCP reçoit la réponse et la transmet à l’agent IA.
 
-Company, Stock
+🗣️ Le LLM génère la réponse finale.
 
-🐍 Serveur MCP Python :
-
-get_employee_info
-
-🟢 Serveur MCP Node.js :
-
-read_file, write_file, edit_file, move_file, list_directory, create_directory, get_file_info, search_files, list_allowed_directories 
+📤 L'API Spring retourne la réponse à l'utilisateur.
 
 
 ## 🚀 Démarrage rapide
