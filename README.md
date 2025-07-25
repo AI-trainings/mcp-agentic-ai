@@ -102,9 +102,9 @@ flowchart TD
     end
 
     subgraph MCP_SERVERS
-        F[Serveur MCP Node.js Tools: read_file – write_file…]
+        F[Serveur MCP Node.js Tools: read_file, write_file…]
         G[Serveur MCP Python Tools:  get_employee_info]
-        H[Serveur MCP Java Tools: – company – stock]
+        H[Serveur MCP Java Tools: stock]
     end
 
     %% Requête utilisateur jusqu’à la sélection du tool
