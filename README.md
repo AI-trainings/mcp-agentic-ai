@@ -48,7 +48,8 @@ Cette application montre comment :
 
 ### 📂 Structure du projet
 
-<img width="457" height="247" alt="image" src="https://github.com/user-attachments/assets/23679997-af78-4ce5-8b1c-bcea982f608f" />
+<img width="603" height="304" alt="image" src="https://github.com/user-attachments/assets/ed161d1c-6b7b-48b3-a00b-cf65b38249ec" />
+
 
 
 ---
