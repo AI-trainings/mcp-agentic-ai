@@ -53,7 +53,7 @@ Cette application montre comment :
 
 ---
 
-### 📊 Diagramme de séquences (simplifié)
+### 📊 Diagramme de séquences
 
 ```mermaid
 sequenceDiagram
