@@ -180,7 +180,7 @@ POST /chat
 }
 ```
 
-# 🌐 Test de l'interface Angular
+# 🌐 Test de l'interface (Angular)
 
 <img width="1006" height="554" alt="image" src="https://github.com/user-attachments/assets/7e4ea767-a72c-4a95-bca6-9e818a90df21" />
 
