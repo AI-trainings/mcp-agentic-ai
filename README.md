@@ -127,7 +127,7 @@ flowchart TD
     C --> B
     B --> A
 ```
-# 🔍 Résumé du workflow
+## 🔍 Résumé du workflow
 👤 Utilisateur : Fait une requête via Swagger ou Angular.
 
 🌐 API REST Spring : Reçoit et transmet la requête à l'agent IA.
@@ -145,7 +145,7 @@ Company, Stock
 ### 🐍 Serveur MCP Python :
 get_employee_info
 
-# 🟢 Serveur MCP Node.js (outils filesystem) :
+### 🟢 Serveur MCP Node.js (outils filesystem) :
 read_file, write_file, ...
 
 ### 🔄 Retour de réponse
